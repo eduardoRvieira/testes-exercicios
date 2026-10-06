@@ -10,7 +10,7 @@ public class PessoaTest {
 
         Pessoa pessoa = new Pessoa("Eduardo", "Reichel", "Reichel", "Blumenau");
 
-        String nomeSW = Pessoa.gerarNomeSW(pessoa);
+        String nomeSW = pessoa.gerarNomeSW();
 
         Assertions.assertThat(nomeSW).isEqualTo("Reied Reblu");
     }

@@ -13,12 +13,12 @@ public class Pessoa {
         this.cidadeNatal = cidadeNatal;
     }
 
-    public static String gerarNomeSW(Pessoa p){
-        String primeiroNomeSW = p.sobrenome.substring(0, 3) + p.nome.substring(0, 2);
+    public String gerarNomeSW(){
+        String primeiroNomeSW = sobrenome.substring(0, 3) + nome.substring(0, 2);
 
-        String sobrenomeSW = p.nomeSolteiraMae.substring(0, 2) + p.cidadeNatal.substring(0, 3);
+        String sobrenomeSW = nomeSolteiraMae.substring(0, 2) + cidadeNatal.substring(0, 3);
 
-        return p.formatarMaiuscula(primeiroNomeSW) + " " + p.formatarMaiuscula(sobrenomeSW);
+        return formatarMaiuscula(primeiroNomeSW) + " " + formatarMaiuscula(sobrenomeSW);
     }
 
     private String formatarMaiuscula(String texto) {
