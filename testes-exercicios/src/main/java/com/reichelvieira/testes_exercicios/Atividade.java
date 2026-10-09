@@ -12,7 +12,21 @@ public class Atividade {
     }
 
     public static String estacoesDoAno(int num){
-        String frase = "";
+        if (num <= 0 || num >=5){
+            throw new NumeroInvalidoException("Número inválido");
+        }
+
+        String frase = switch (num){
+            case 1 -> "É verão\nE o tempo está quente.";
+            case 2 -> "É outono\nE as folhas caem.";
+            case 3 -> "É primavera\nE as flores nascem";
+            case 4 -> "É inverno\nE o tempo está frio";
+            default -> null;
+        };
+
+        return frase;
+
+        /*String frase = "";
 
         switch (num) {
             case 1:
@@ -30,6 +44,6 @@ public class Atividade {
             default:
                 throw new NumeroInvalidoException("Número inválido");
         }
-        return frase;
+        return frase;*/
     }
 }

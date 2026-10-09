@@ -1,11 +1,13 @@
 package com.reichelvieira.testes_exercicios;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class AtividadeTest {
 
     @Test
+    @DisplayName("Teste para retornar par ou ímpar dependendo do número inserido")
     void deveRetornarTrueSeForParEFalseSeForImpar(){
 
         double num1 = 1;
